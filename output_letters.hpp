@@ -8,4 +8,8 @@
 #ifndef OUTPUT_LETTERS_HPP
 #define OUTPUT_LETTERS_HPP
 
-#endif //LAB2_OUTPUT_LETTERS_HPP
+#include <fstream>
+using std::ofstream;
+void output_letters(ofstream &, int*);
+
+#endif

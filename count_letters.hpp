@@ -12,7 +12,6 @@
 #include <iostream>
 using std::ifstream;
 
-void count_letters(ifstream &, int*)
+void count_letters(ifstream &, int*);
 
-
-#endif //LAB2_COUNT_LETTERS_HPP
+#endif
