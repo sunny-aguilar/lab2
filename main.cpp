@@ -8,9 +8,15 @@
 *********************************************************************/
 #include <iostream>
 #include <fstream>
+using std::cin;
+using std::cout;
+using std::ifstream;
+using std::ofstream;
+using std::endl;
 
 int main() {
-    std::cout << "Hello world\n";
+    ofstream inputFile;
+    inputFile.open("file_fun.txt");
 
     return 0;
 }
