@@ -4,8 +4,15 @@
 ** Description:     Write a short description
 **                  of your code
 **                  here.
+**
 *********************************************************************/
-#ifndef OUTPUT_LETTERS_HPP
-#define OUTPUT_LETTERS_HPP
+#ifndef COUNT_LETTERS_HPP
+#define COUNT_LETTERS_HPP
 
-#endif //LAB2_OUTPUT_LETTERS_HPP
+#include <iostream>
+using std::ifstream;
+
+void count_letters(ifstream &, int*)
+
+
+#endif //LAB2_COUNT_LETTERS_HPP

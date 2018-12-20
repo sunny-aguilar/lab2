@@ -5,6 +5,8 @@
 **                  of your code
 **                  here.
 *********************************************************************/
+#include <fstream>
+using std::ofstream;
 
 void output_letters(ofstream &, int*) {
 

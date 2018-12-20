@@ -5,6 +5,8 @@
 **                  of your code
 **                  here.
 *********************************************************************/
+#include <fstream>
+using std::ifstream ;
 
 void count_letters(ifstream &, int*) {
 
