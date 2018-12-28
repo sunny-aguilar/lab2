@@ -37,15 +37,15 @@ int main() {
     do {
         cout << "Enter a file name:\n";                 // request file name
         cin >> fileName;                                // s/b input_fun.txt
+        inFile.open(fileName);                          // input file data from input_fun.txt
     } while (inFile.fail());
-    inFile.open("input_fun.txt");                       // input file data from file_fun.txt
     count_letters(inFile, frequencyPtr);                // read in file and calculate character frequency in file
     inFile.close();                                     // close input file
 
     // output character frequency count to file
     cout << "Enter a file name to output results\n";    // request file name
     cin >> fileName;                                    // get file name from user
-    ofstream outFile("output_fun.txt");                 // output files are auto created/ overwritten
+    ofstream outFile("file_fun.txt");                   // output files are auto created/ overwritten
     output_letters(outFile, frequencyPtr);              // format and output results to a file
     outFile.close();                                    // close output file
 
