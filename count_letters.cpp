@@ -7,14 +7,16 @@
 *********************************************************************/
 #include <iostream>
 #include <fstream>
-using std::ifstream;
+#include <string>
 using std::cout;
+using std::ifstream;
+using std::string;
 
 void count_letters(ifstream &inFile, int*) {
-    // check if input file exists
-    do {
+    char letter;
+    string stringRead;
+    while (inFile >> letter) {
 
-    } while (inFile.fail());
-
+    }
 
 }
