@@ -25,6 +25,10 @@ using std::stringstream;
 
 
 int main() {
+    // see example program 12-12 pg. 837 for an example that uses a
+    // pointer to count the number of times a specific character
+    // appears in a C-string
+
     string fileName;
     vector<int> matrix;
 
