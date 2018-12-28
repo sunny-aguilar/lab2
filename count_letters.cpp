@@ -11,12 +11,13 @@
 using std::cout;
 using std::ifstream;
 using std::string;
+using std::endl;
 
 void count_letters(ifstream &inFile, int*) {
     char letter;
     string stringRead;
     while (inFile >> letter) {
-
+        cout << letter << endl;
     }
 
 }
