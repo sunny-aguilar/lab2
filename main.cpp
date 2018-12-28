@@ -30,7 +30,7 @@ int main() {
     // pointer to count the number of times a specific character
     // appears in a C-string
     string fileName;
-    vector<int> matrix;
+    int frequency[26];
 
     // ask user to enter a file name
     cout << "Enter a file name:\n";
@@ -44,6 +44,11 @@ int main() {
         cout << "Cannot open file\n";
         return 0;
     }
+
+
+
+
+
 
 //    inputFile.open("file_fun.txt");
     outFile << "Hello file!" << endl;
