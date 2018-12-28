@@ -5,9 +5,17 @@
 **                  of your code
 **                  here.
 *********************************************************************/
+#include <iostream>
 #include <fstream>
-using std::ifstream ;
+using std::ifstream;
+using std::cout;
 
-void count_letters(ifstream &, int*) {
+void count_letters(ifstream &inFile, int*) {
+    // check if input file exists
+    if (inFile.fail()) {
+        cout << "Cannot open file\n";
+    }
+
+
 
 }
