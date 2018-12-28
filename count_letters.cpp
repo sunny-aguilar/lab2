@@ -15,11 +15,17 @@ using std::endl;
 
 void count_letters(ifstream &inFile, int*) {
     char letter;
+    char letterArr[100];
     char stringRead;
     char ltrVal;
+    int counter = 0;
 
     while (inFile >> letter) {
+        letterArr[counter] = letter;
         cout << letter << endl;
+        counter++;
     }
-
+    cout << letterArr[0] << endl;
+    cout << letterArr[1] << endl;
+    cout << letterArr[2] << endl;
 }
