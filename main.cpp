@@ -33,17 +33,17 @@ int main() {
     int *frequencyPtr = nullptr;
 
     // ask user to enter a file name
-    cout << "Enter a file name:\n";
+    cout << "Enter a file name:\n";                     // request file name
     cin >> fileName;                                    // s/b input_fun.txt
-
-    // input file data from file_fun.txt
-    ifstream inFile("input_fun.txt");
-    ofstream outFile("output_fun.txt");                 // output files are auto created/ overwritten
+    ifstream inFile("input_fun.txt");                   // input file data from file_fun.txt
 
     // read in file and calculate character frequency in file
     count_letters(inFile, frequencyPtr);
 
     // output character frequency count to file
+    cout << "Enter a file name to output results\n";    // request file name
+    cin >> fileName;                                    // get file name from user
+    ofstream outFile("output_fun.txt");                 // output files are auto created/ overwritten
     output_letters(outFile, frequencyPtr);
 
 
