@@ -35,11 +35,11 @@ int main() {
 
     // ask user to enter a file name
     cout << "Enter a file name:\n";
-    cin >> inFile;
+    cin >> inFile;                      // s/b input_fun.txt
 
     // input file data from file_fun.txt
     ifstream ifs("input_fun.txt");
-    ofstream inputFile("file_fun.txt");
+    ofstream inputFile("output_fun.txt");
 
 
 
