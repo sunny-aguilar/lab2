@@ -8,22 +8,20 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <sstream>
 #include <cctype>
 using std::cout;
 using std::ifstream;
 using std::string;
 using std::endl;
-using std::stringstream;
 
-void count_letters(ifstream &inFile, int*) {
-    stringstream ss;
+void count_letters(ifstream &inFile, int *intArr) {
     char letterArr[500];
     char alphabet[] = {"abcdefghijklmnopqrstuvwxyz"};
+    string abc = "abcdefghijklmnopqrstuvwxyz";
     char charsInfile[27];
     char letter;
     string input;
-    string ssOutput;
+    string fileString;
     char stringRead;
     char ltrVal;
     int counter = 0;
@@ -34,12 +32,32 @@ void count_letters(ifstream &inFile, int*) {
     while (!inFile.fail()) {
         cout << input;
         inFile >> input;
-        ssOutput += input;
+        fileString += input;
     }
+    cout << "String length is " << fileString.length();
     cout << endl;
 
-    cout << "string created is \n" << ssOutput << endl;
-    cout << ssOutput[0] << endl;
+    cout << "string created is \n" << fileString << endl;
+    if (fileString[0] == 65) {
+        cout << "If smtmt " << fileString[0] << endl;
+    }
+
+
+    cout << fileString[1] << endl;
+    cout << fileString[2] << endl;
+
+    for (int i = 0; i < fileString.length(); i++) {
+        // check if character is already in po
+
+
+
+        for (int j = 0; i < abc.length(); j++) {
+            if (fileString[i] == abc[j]) {
+
+            }
+        }
+    }
+
 
 //    while (inFile >> letter) {
 //        testCounter++;
