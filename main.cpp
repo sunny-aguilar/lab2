@@ -34,12 +34,15 @@ int main() {
 
     // loop for error
     ifstream inFile;                                    // create input file object
+    cout << "Enter a file name:\n";
     do {
-        cout << "Enter a file name:\n";                 // request file name
         cin >> fileName;                                // s/b input_fun.txt
         inFile.open(fileName);                          // input file data from input_fun.txt
+        if (inFile.fail())
+            cout << "File not found! "                  // request file name
+                 << "Enter a file name:\n";
     } while (inFile.fail());
-    cout << "Input file successfully opened\n";
+    cout << "Input file successfully opened\n";         // confirm input file opened
     count_letters(inFile, frequencyPtr);                // read in file and calculate character frequency in file
     inFile.close();                                     // close input file
 
