@@ -18,19 +18,33 @@ using std::stringstream;
 
 void count_letters(ifstream &inFile, int*) {
     stringstream ss;
-    char letterArr[100];
+
     char alphabet[] = {"abcdefghijklmnopqrstuvwxyz"};
     char charsInfile[27];
     char letter;
+    string sStream;
+    string ssOutput;
     char stringRead;
     char ltrVal;
     int counter = 0;
+    int *ptr = nullptr;
 
+    // count total characters read in
     while (inFile >> letter) {
-        letterArr[counter] = letter;
-        cout << letter << endl;
         counter++;
     }
+    cout << "Counter is " << counter << endl;
+    char letterArr[counter];
+
+
+    counter = 0;
+    while (inFile >> letter) {
+        letterArr[counter] = letter;
+        cout << letter << " ";
+        counter++;
+    }
+    cout << endl;
+
     cout << "Letters saved in array\n";
     for (int i = 0; i < 52; i++) {
         cout << letterArr[i] << " ";
