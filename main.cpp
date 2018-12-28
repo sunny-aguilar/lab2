@@ -39,6 +39,7 @@ int main() {
         cin >> fileName;                                // s/b input_fun.txt
         inFile.open(fileName);                          // input file data from input_fun.txt
     } while (inFile.fail());
+    cout << "Input file successfully opened\n";
     count_letters(inFile, frequencyPtr);                // read in file and calculate character frequency in file
     inFile.close();                                     // close input file
 

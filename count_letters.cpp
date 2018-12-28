@@ -13,9 +13,7 @@ using std::cout;
 void count_letters(ifstream &inFile, int*) {
     // check if input file exists
     do {
-        if (inFile.fail()) {
-            cout << "Cannot open file\n";
-        }
+
     } while (inFile.fail());
 
 
