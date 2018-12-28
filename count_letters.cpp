@@ -15,7 +15,9 @@ using std::endl;
 
 void count_letters(ifstream &inFile, int*) {
     char letter;
-    string stringRead;
+    char stringRead;
+    char ltrVal;
+
     while (inFile >> letter) {
         cout << letter << endl;
     }

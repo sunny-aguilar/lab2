@@ -8,6 +8,6 @@
 #include <fstream>
 using std::ofstream;
 
-void output_letters(ofstream &, int*) {
+void output_letters(ofstream &outFile, int*) {
 
 }
