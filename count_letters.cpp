@@ -8,12 +8,14 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <cctype>
 using std::cout;
 using std::ifstream;
 using std::string;
 using std::endl;
 
 void count_letters(ifstream &inFile, int*) {
+    char alphabet[] = {"abcdefghijklmnopqrstuvwxyz"};
     char letter;
     char letterArr[100];
     char stringRead;
