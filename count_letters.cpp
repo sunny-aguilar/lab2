@@ -18,14 +18,12 @@ void count_letters(ifstream &inFile, int *intArr) {
     char letterArr[500];
     char alphabet[] = {"abcdefghijklmnopqrstuvwxyz"};
     string abc = "abcdefghijklmnopqrstuvwxyz";
+    int stringLength = 0;
     char charsInfile[27];
     char letter;
     string input;
     string fileString;
-    char stringRead;
-    char ltrVal;
     int counter = 0;
-    int testCounter = 0;
     int *ptr = nullptr;
 
 
