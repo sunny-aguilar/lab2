@@ -18,10 +18,10 @@ using std::stringstream;
 
 void count_letters(ifstream &inFile, int*) {
     stringstream ss;
+    char letterArr[100];
     char alphabet[] = {"abcdefghijklmnopqrstuvwxyz"};
     char charsInfile[27];
     char letter;
-    char letterArr[100];
     char stringRead;
     char ltrVal;
     int counter = 0;
@@ -44,7 +44,9 @@ void count_letters(ifstream &inFile, int*) {
     // 4. count frequency (2 approaches)
     // 4a. count total instances of characters in the array
     // 4n. only add characters to the array if they have not
-    //     been previously added.
-    // 5. output results to file
+    //     been previously added. If it already exist, use
+    //     the array pointer to maintain count of each frequency
+    //     in each letter of the alphabet
+    // 5. organize alphabetically / output results to file
 
 }
