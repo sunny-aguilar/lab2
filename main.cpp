@@ -28,24 +28,18 @@ int main() {
     // see example program 12-12 pg. 837 for an example that uses a
     // pointer to count the number of times a specific character
     // appears in a C-string
-
     string fileName;
     vector<int> matrix;
 
-    char  name[] = "sandro aguilar";
-    char *p = nullptr;
-    p = name;
-    cout << p << endl;
-    p = "jane doe";
-    cout << p << endl;
-
+    // ask user to enter a file name
+    cout << "Enter a file name:\n";
+    cin >> fileName;
 
     // input file data from file_fun.txt
     ofstream inputFile("file_fun.txt", std::ios::app);
     ifstream ifs("input_fun.txt");
-    // ask user to enter a file name
-    cout << "Enter a file name:\n";
-    cin >> fileName;
+
+
 
 //    inputFile.open("file_fun.txt");
     inputFile << "Hello file!" << endl;
