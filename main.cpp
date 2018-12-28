@@ -30,11 +30,11 @@ int main() {
     // pointer to count the number of times a specific character
     // appears in a C-string
     string fileName;
-    int frequency[26];
+    int *frequencyPtr;
 
     // ask user to enter a file name
     cout << "Enter a file name:\n";
-    cin >> fileName;                      // s/b input_fun.txt
+    cin >> fileName;                                    // s/b input_fun.txt
 
     // input file data from file_fun.txt
     ifstream inFile("input_fun.txt");
