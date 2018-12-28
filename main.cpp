@@ -29,31 +29,33 @@ int main() {
     // see example program 12-12 pg. 837 for an example that uses a
     // pointer to count the number of times a specific character
     // appears in a C-string
-    string inFile;
-    string outFile;
+    string fileName;
     vector<int> matrix;
 
     // ask user to enter a file name
     cout << "Enter a file name:\n";
-    cin >> inFile;                      // s/b input_fun.txt
+    cin >> fileName;                      // s/b input_fun.txt
 
     // input file data from file_fun.txt
-    ifstream ifs("input_fun.txt");
-    ofstream inputFile("output_fun.txt");
+    ifstream inFile("input_fun.txt");
+    ofstream outFile("output_fun.txt");
 
-
+    if (inFile.fail()) {
+        cout << "Cannot open file\n";
+        return 0;
+    }
 
 //    inputFile.open("file_fun.txt");
-    inputFile << "Hello file!" << endl;
+    outFile << "Hello file!" << endl;
 
     // create output file output_letters.txt
 
-    stringstream ss;
-    string out;
-
-    ss << 11 << " Sandro Aguilar";
-    getline(ss, out);
-    cout << out;
+//    stringstream ss;
+//    string out;
+//
+//    ss << 11 << " Sandro Aguilar";
+//    getline(ss, out);
+//    cout << out;
 
 
 
