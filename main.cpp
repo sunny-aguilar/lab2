@@ -38,7 +38,7 @@ int main() {
 
     // input file data from file_fun.txt
     ifstream inFile("input_fun.txt");
-    ofstream outFile("output_fun.txt");
+    ofstream outFile("output_fun.txt");                 // output files are auto created/ overwritten
 
     if (inFile.fail()) {
         cout << "Cannot open file\n";
