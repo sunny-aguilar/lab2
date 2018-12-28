@@ -18,6 +18,7 @@ using std::cin;
 using std::cout;
 using std::ifstream;
 using std::ofstream;
+using std::fstream;
 using std::endl;
 using std::vector;
 using std::string;
@@ -28,16 +29,17 @@ int main() {
     // see example program 12-12 pg. 837 for an example that uses a
     // pointer to count the number of times a specific character
     // appears in a C-string
-    string fileName;
+    string inFile;
+    string outFile;
     vector<int> matrix;
 
     // ask user to enter a file name
     cout << "Enter a file name:\n";
-    cin >> fileName;
+    cin >> inFile;
 
     // input file data from file_fun.txt
-    ofstream inputFile("file_fun.txt", std::ios::app);
     ifstream ifs("input_fun.txt");
+    ofstream inputFile("file_fun.txt");
 
 
 
