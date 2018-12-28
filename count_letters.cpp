@@ -18,38 +18,48 @@ using std::stringstream;
 
 void count_letters(ifstream &inFile, int*) {
     stringstream ss;
-    char letterArr[0];
+    char letterArr[500];
     char alphabet[] = {"abcdefghijklmnopqrstuvwxyz"};
     char charsInfile[27];
     char letter;
-    string sStream;
+    string input;
     string ssOutput;
     char stringRead;
     char ltrVal;
     int counter = 0;
+    int testCounter = 0;
     int *ptr = nullptr;
 
-//     count total characters read in
-//    while (inFile >> letter) {
-//        counter++;
-//    }
-//    cout << "Counter is " << counter << endl;
-//    char letterArr[counter];
-//
-//
-//    counter = 0;
-    while (inFile >> letter) {
-        letterArr[counter] = letter;
-        cout << letter << " ";
-        counter++;
-    }
-    cout << "\nCounter is at " << counter << endl;
 
-    cout << "Letters saved in array\n";
-    for (int i = 0; i < counter; i++) {
-        cout << letterArr[i] << " ";
+    while (!inFile.fail()) {
+        cout << input;
+        inFile >> input;
+        ssOutput += input;
     }
     cout << endl;
+
+    cout << "string created is \n" << ssOutput << endl;
+    cout << ssOutput[0] << endl;
+
+//    while (inFile >> letter) {
+//        testCounter++;
+//    }
+//    inFile.clear();
+//    inFile.seekg(0);
+//
+//    while (inFile >> letter) {
+//        letterArr[counter] = letter;
+//        cout << letter << " ";
+//        cout << "\nCounters is at " << counter << endl;
+//        counter++;
+//    }
+////    cout << "\nCounter is at " << counter << endl;
+//
+//    cout << "Letters saved in array\n";
+//    for (int i = 0; i < 52; i++) {
+//        cout << letterArr[i] << " ";
+//    }
+//    cout << endl;
 
     // 1. transfer file contents into a string stream;
     // 2. convert char to lower case
