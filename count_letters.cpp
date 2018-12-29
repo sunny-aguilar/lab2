@@ -32,30 +32,39 @@ void count_letters(ifstream &inFile, int *intArr) {
         inFile >> input;
         fileString += input;
     }
-    cout << "String length is " << fileString.length();
+    stringLength = fileString.length();
+    cout << "\nString length is " << fileString.length();
     cout << endl;
 
     cout << "string created is \n" << fileString << endl;
     if (fileString[0] == 65) {
         cout << "If smtmt " << fileString[0] << endl;
     }
+    cout << endl;
+
+//    cout << fileString[1] << endl;
+//    cout << fileString[2] << endl;
 
 
-    cout << fileString[1] << endl;
-    cout << fileString[2] << endl;
+    ptr = new int[stringLength];
+    for (int x = 0; x < stringLength; x++) {
+        ptr[x] = 0;
+    }
+    cout << endl;
 
     for (int i = 0; i < fileString.length(); i++) {
-        // check if character is already in po
-
-
-
         for (int j = 0; i < abc.length(); j++) {
             if (fileString[i] == abc[j]) {
-
+                ptr[i] += 1;
             }
         }
     }
 
+    cout << "\nPrint contents of pointer array\n";
+    for (int z = 0; z < stringLength; z++) {
+        cout << ptr[z] << " ";
+    }
+    cout << endl;
 
 //    while (inFile >> letter) {
 //        testCounter++;
