@@ -24,7 +24,6 @@ void count_letters(ifstream &inFile, int *intArr) {
     string input = "";
     string fileString = "";
     int counter = 0;
-    int *ptr = nullptr;
 
     cout << "Values read in file:\n";
     while (inFile >> input) {
@@ -47,9 +46,8 @@ void count_letters(ifstream &inFile, int *intArr) {
     cout << "Show lower case letters in string \n" << fileString << endl;
     cout << endl;
 
-    ptr = new int[26];
     for (int x = 0; x < 26; x++) {
-        ptr[x] = 0;
+        intArr[x] = 0;
     }
     cout << endl;
 
@@ -59,52 +57,20 @@ void count_letters(ifstream &inFile, int *intArr) {
                 counter++;
             }
         }
-    ptr[i] = counter;
+        intArr[i] = counter;
     counter = 0;
     }
 
     cout << "\nPrint contents of pointer array\n";
     for (int z = 0; z < 26; z++) {
-        cout << ptr[z] << " ";
+        cout << intArr[z] << " ";
     }
     cout << endl;
 
-    intArr = ptr;
+//    delete [] ptr;
 
-    delete [] ptr;
+//    ptr = nullptr;
 
-    ptr = nullptr;
 
-//    while (inFile >> letter) {
-//        testCounter++;
-//    }
-//    inFile.clear();
-//    inFile.seekg(0);
-//
-//    while (inFile >> letter) {
-//        letterArr[counter] = letter;
-//        cout << letter << " ";
-//        cout << "\nCounters is at " << counter << endl;
-//        counter++;
-//    }
-////    cout << "\nCounter is at " << counter << endl;
-//
-//    cout << "Letters saved in array\n";
-//    for (int i = 0; i < 52; i++) {
-//        cout << letterArr[i] << " ";
-//    }
-//    cout << endl;
-
-    // 1. transfer file contents into a string stream;
-    // 2. convert char to lower case
-    // 3. all all of the characters in the input file are then
-    //    added to a new array
-    // 4. count frequency (2 approaches)
-    // 4a. count total instances of characters in the array
-    // 4n. only add characters to the array if they have not
-    //     been previously added. If it already exist, use
-    //     the array pointer to maintain count of each frequency
-    //     in each letter of the alphabet
-    // 5. organize alphabetically / output results to file
 
 }

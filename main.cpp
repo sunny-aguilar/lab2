@@ -30,7 +30,7 @@ int main() {
     // pointer to count the number of times a specific character
     // appears in a C-string
     string fileName;
-    int *frequencyPtr = nullptr;
+    int *frequencyPtr = new int[26];
 
     // loop for error
     ifstream inFile;                                    // create input file object
@@ -46,8 +46,14 @@ int main() {
     count_letters(inFile, frequencyPtr);                // read in file and calculate character frequency in file
     inFile.close();                                     // close input file
 
+    cout << "Frequency pointer array in main\n";
+    for (int x = 0; x < 26; x++) {
+        cout << frequencyPtr[x] << " ";
+    }
+
+
     // output character frequency count to file
-    cout << "Enter a file name to output results\n";    // request file name
+    cout << "\nEnter a file name to output results\n";    // request file name
 //    cin >> fileName;                                    // get file name from user
     ofstream outFile("file_fun.txt");                   // output files are auto created/ overwritten
     output_letters(outFile, frequencyPtr);              // format and output results to a file
