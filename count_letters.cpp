@@ -24,8 +24,8 @@ void count_letters(ifstream &inFile, int *intArr) {
     cout << "Values read in file:\n";
     while (inFile >> input) {
         cout << input;
-         fileString += input;
-//        getline(inFile, input);
+//         fileString += input;
+        getline(inFile, input);
     }
     cout << endl;
     cout << "The string created is\n" <<fileString << endl;
