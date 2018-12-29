@@ -31,11 +31,9 @@ void count_letters(ifstream &inFile, int *intArr) {
         stringLength = input.size();
 
         // make all characters lowercase
-        for (int x = 0; x < stringLength; x++) {
-            input[x] = tolower(input[x]);
+        for (int i = 0; i < stringLength; i++) {
+            input[i] = tolower(input[i]);
         }
-
-        cout << endl;
 
         for (int i = 0; i < abc.length(); i++) {
             for (int j = 0; j < stringLength; j++) {
@@ -46,7 +44,6 @@ void count_letters(ifstream &inFile, int *intArr) {
             intArr[i] = counter;
         counter = 0;
         }
-
 
         // request output file name for each paragraph
         cout << "\nEnter a file name to output results\n";
