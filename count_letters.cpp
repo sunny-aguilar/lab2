@@ -15,20 +15,17 @@ using std::string;
 using std::endl;
 
 void count_letters(ifstream &inFile, int *intArr) {
-    char letterArr[500];
-    char alphabet[] = {"abcdefghijklmnopqrstuvwxyz"};
     string abc = "abcdefghijklmnopqrstuvwxyz";
     int stringLength = 0;
-    char charsInfile[27];
-    char letter;
-    string input = "";
-    string fileString = "";
+    string input;
+    string fileString;
     int counter = 0;
 
     cout << "Values read in file:\n";
     while (inFile >> input) {
         cout << input;
-        fileString += input;
+         fileString += input;
+//        getline(inFile, input);
     }
     cout << endl;
     cout << "The string created is\n" <<fileString << endl;
@@ -66,11 +63,4 @@ void count_letters(ifstream &inFile, int *intArr) {
         cout << intArr[z] << " ";
     }
     cout << endl;
-
-//    delete [] ptr;
-
-//    ptr = nullptr;
-
-
-
 }

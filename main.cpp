@@ -51,7 +51,6 @@ int main() {
         cout << frequencyPtr[x] << " ";
     }
 
-
     // output character frequency count to file
     cout << "\nEnter a file name to output results\n";    // request file name
 //    cin >> fileName;                                    // get file name from user
@@ -59,12 +58,8 @@ int main() {
     output_letters(outFile, frequencyPtr);              // format and output results to a file
     outFile.close();                                    // close output file
 
-//    stringstream ss;
-//    string out;
-//
-//    ss << 11 << " Sandro Aguilar";
-//    getline(ss, out);
-//    cout << out;
+    delete [] frequencyPtr;
+    frequencyPtr = nullptr;
 
     return 0;
 }
