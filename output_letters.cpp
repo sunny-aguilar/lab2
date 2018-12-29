@@ -14,9 +14,11 @@ using std::cout;
 using std::endl;
 
 void output_letters(ofstream &outFile, int *intArr) {
+    // string holding alphabet
     string abc = "abcdefghijklmnopqrstuvwxyz";
 
-    for (int x = 0; x < 26; x++) {
-        outFile << abc[x] << ": " << intArr[x] << " \n";
+    // output alphabet with character count
+    for (int i = 0; i < 26; i++) {
+        outFile << abc[i] << ": " << intArr[i] << " \n";
     }
 }
