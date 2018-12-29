@@ -20,15 +20,14 @@ using std::string;
 
 
 int main() {
-    string fileName;
-    int *frequencyPtr = new int[26];
-
-    // loop for error
+    string fileName;                                    // variable to save input file name
+    int *frequencyPtr = new int[26];                    // create a pointer to an int array
+    
     ifstream inFile;                                    // create input file object
-    cout << "Enter a file name:\n";
+    cout << "Enter a file name:\n";                     // message prompt for user
 
-    do {
-//        cin >> fileName;                                // s/b input_fun.txt
+    do {                                                // loop - ask user for file name if incorrect
+        cin >> fileName;                                // input_fun.txt
         inFile.open("input_fun.txt");                   // input file data from input_fun.txt
         if (inFile.fail())
             cout << "File not found! "                  // request file name
@@ -40,8 +39,8 @@ int main() {
     inFile.close();                                     // close input file
 
 
-    delete [] frequencyPtr;
-    frequencyPtr = nullptr;
+    delete [] frequencyPtr;                             // delete memory
+    frequencyPtr = nullptr;                             // remove dangling pointer
 
     return 0;
 }
