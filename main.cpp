@@ -48,7 +48,7 @@ int main() {
 
     // output character frequency count to file
     cout << "Enter a file name to output results\n";    // request file name
-    cin >> fileName;                                    // get file name from user
+//    cin >> fileName;                                    // get file name from user
     ofstream outFile("file_fun.txt");                   // output files are auto created/ overwritten
     output_letters(outFile, frequencyPtr);              // format and output results to a file
     outFile.close();                                    // close output file

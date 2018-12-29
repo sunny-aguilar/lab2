@@ -26,10 +26,10 @@ void count_letters(ifstream &inFile, int *intArr) {
     int counter = 0;
     int *ptr = nullptr;
 
+    cout << "Values read in file:\n";
     while (inFile >> input) {
         cout << input;
         fileString += input;
-//        counter++;
     }
     cout << endl;
     cout << "The string created is\n" <<fileString << endl;
@@ -37,13 +37,6 @@ void count_letters(ifstream &inFile, int *intArr) {
     stringLength = fileString.size();
     cout << endl;
 
-//    cout << "string created is \n" << fileString << endl;
-//    if (fileString[0] == 65) {
-//        cout << "If smtmt " << fileString[0] << endl;
-//    }
-    cout << endl;
-//    cout << fileString[1] << endl;
-//    cout << fileString[2] << endl;
 
     // make all characters lowercase
     for (int x = 0; x < stringLength; x++) {
@@ -54,36 +47,33 @@ void count_letters(ifstream &inFile, int *intArr) {
     cout << "Show lower case letters in string \n" << fileString << endl;
     cout << endl;
 
-    ptr = new int[stringLength];
-    for (int x = 0; x < stringLength; x++) {
+    ptr = new int[26];
+    for (int x = 0; x < 26; x++) {
         ptr[x] = 0;
     }
-//    cout << endl;
-//    cout << "Output ptr[x] contents ";
-//    for (int x = 0; x < stringLength; x++) {
-//        cout << ptr[x] << " ";
-//    }
     cout << endl;
-
-//    ptr[0] += 2;
-//    cout << "Value in ptr array " << ptr[0] << endl;
 
     for (int i = 0; i < abc.length(); i++) {
         for (int j = 0; j < stringLength; j++) {
             if (fileString[j] == abc[i]) {
                 counter++;
             }
-            ptr[i] = counter;
         }
+    ptr[i] = counter;
+    counter = 0;
     }
 
     cout << "\nPrint contents of pointer array\n";
-    for (int z = 0; z < stringLength; z++) {
+    for (int z = 0; z < 26; z++) {
         cout << ptr[z] << " ";
     }
     cout << endl;
 
+    intArr = ptr;
 
+    delete [] ptr;
+
+    ptr = nullptr;
 
 //    while (inFile >> letter) {
 //        testCounter++;
