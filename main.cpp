@@ -15,16 +15,11 @@
 using std::cin;
 using std::cout;
 using std::ifstream;
-using std::ofstream;
-using std::fstream;
 using std::endl;
 using std::string;
 
 
 int main() {
-    // see example program 12-12 pg. 837 for an example that uses a
-    // pointer to count the number of times a specific character
-    // appears in a C-string
     string fileName;
     int *frequencyPtr = new int[26];
 
