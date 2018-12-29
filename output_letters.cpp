@@ -15,6 +15,7 @@ void output_letters(ofstream &outFile, int *intArr) {
     cout << "Array received in output_Letters Function\n";
     for (int x = 0; x < 26; x++) {
         cout << intArr[x] << " ";
+        outFile << intArr[x] << " ";
     }
 
 

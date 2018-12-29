@@ -10,6 +10,7 @@
 #include <fstream>
 #include <string>
 #include <cctype>
+using std::cin;
 using std::cout;
 using std::ifstream;
 using std::string;
@@ -20,6 +21,7 @@ void count_letters(ifstream &inFile, int *intArr) {
     int stringLength = 0;
     string input;
     string fileString;
+    string outFileName;
     int counter = 0;
 
     cout << "Values read in file:\n";
@@ -56,7 +58,8 @@ void count_letters(ifstream &inFile, int *intArr) {
 
 
         cout << "\nEnter a file name to output results\n";
-        ofstream outFile("file_fun.txt");
+        cin >> outFileName;
+        ofstream outFile(outFileName);
 
         // call output_letters.cpp function
         output_letters(outFile, intArr);
