@@ -31,35 +31,22 @@ int main() {
     // loop for error
     ifstream inFile;                                    // create input file object
     cout << "Enter a file name:\n";
+
     do {
 //        cin >> fileName;                                // s/b input_fun.txt
-        inFile.open("input_fun.txt");                          // input file data from input_fun.txt
+        inFile.open("input_fun.txt");                   // input file data from input_fun.txt
         if (inFile.fail())
             cout << "File not found! "                  // request file name
                  << "Enter a file name:\n";
     } while (inFile.fail());
+
     cout << "Input file successfully opened\n";         // confirm input file opened
     count_letters(inFile, frequencyPtr);                // read in file and calculate character frequency in file
     inFile.close();                                     // close input file
 
 
-
-    cout << "Frequency pointer array in main\n";
-    for (int x = 0; x < 26; x++) {
-        cout << frequencyPtr[x] << " ";
-    }
-
-
-
-    // output character frequency count to file
-    cout << "\nEnter a file name to output results\n";    // request file name
-//    cin >> fileName;                                    // get file name from user
-    ofstream outFile("file_fun.txt");                   // output files are auto created/ overwritten
-    output_letters(outFile, frequencyPtr);              // format and output results to a file
-    outFile.close();                                    // close output file
-
-//    delete [] frequencyPtr;
-//    frequencyPtr = nullptr;
+    delete [] frequencyPtr;
+    frequencyPtr = nullptr;
 
     return 0;
 }
