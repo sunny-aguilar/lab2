@@ -10,9 +10,7 @@
 #include "output_letters.hpp"
 #include <iostream>
 #include <fstream>
-#include <sstream>
 #include <string>
-#include <vector>
 #include <iomanip>  // characters
 using std::cin;
 using std::cout;
@@ -20,9 +18,7 @@ using std::ifstream;
 using std::ofstream;
 using std::fstream;
 using std::endl;
-using std::vector;
 using std::string;
-using std::stringstream;
 
 
 int main() {
@@ -46,10 +42,14 @@ int main() {
     count_letters(inFile, frequencyPtr);                // read in file and calculate character frequency in file
     inFile.close();                                     // close input file
 
+
+
     cout << "Frequency pointer array in main\n";
     for (int x = 0; x < 26; x++) {
         cout << frequencyPtr[x] << " ";
     }
+
+
 
     // output character frequency count to file
     cout << "\nEnter a file name to output results\n";    // request file name

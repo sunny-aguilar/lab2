@@ -20,5 +20,4 @@ void output_letters(ofstream &outFile, int *intArr) {
 
 
 
-
 }

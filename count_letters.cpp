@@ -54,8 +54,12 @@ void count_letters(ifstream &inFile, int *intArr) {
         counter = 0;
         }
 
-        // call output_letters.cpp function
 
+        cout << "\nEnter a file name to output results\n";
+        ofstream outFile("file_fun.txt");
+
+        // call output_letters.cpp function
+        output_letters(outFile, intArr);
 
     }
 //    cout << endl;
