@@ -7,8 +7,8 @@
 **                  paragraph, the function counts the frequency of
 **                  each letter and ask the user what filename to
 **                  output to. Function output_letters is then called
-*                  with output file and pointer to an in array
- *                  parameters.
+**                 with output file and pointer to an in array
+**                  parameters.
 *********************************************************************/
 #include "output_letters.hpp"
 #include <iostream>
