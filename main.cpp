@@ -6,7 +6,6 @@
 **                  results to a new file.
 *********************************************************************/
 #include "count_letters.hpp"
-#include "output_letters.hpp"
 #include <iostream>
 #include <fstream>
 #include <string>

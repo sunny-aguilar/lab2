@@ -63,8 +63,5 @@ void count_letters(ifstream &inFile, int *intArr) {
 
         // call output_letters function to display results
         output_letters(outFile, intArr);
-
-        // close output file
-//        outFile.close();
     }
 }
