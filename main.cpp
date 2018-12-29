@@ -16,7 +16,6 @@ using std::ifstream;
 using std::endl;
 using std::string;
 
-
 int main() {
     string fileName;                                    // variable to save input file name
     int *frequencyPtr = new int[26];                    // create a pointer to an int array
