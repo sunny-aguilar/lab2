@@ -26,7 +26,6 @@ void count_letters(ifstream &inFile, int *intArr) {
 
     cout << "Values read in file:\n";
     while (!inFile.eof()) {
-//        cout << input;
         getline(inFile, input);
         cout << input << endl;
 
