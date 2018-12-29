@@ -3,8 +3,8 @@
 ** Date:            Jan 2019
 ** Description:     This function receives two parameters which are an
  *                  ofstream object and and a pointer to an int array.
-**                  of your code
-**                  here.
+**                  The frequencies contained in the pointer to the
+**                  array are saved alphabetically.
 *********************************************************************/
 #include <fstream>
 #include <iostream>

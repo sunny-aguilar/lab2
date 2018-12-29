@@ -7,7 +7,7 @@
 **                  paragraph, the function counts the frequency of
 **                  each letter and ask the user what filename to
 **                  output to. Function output_letters is then called
-**                 with output file and pointer to an in array
+**                  with output file and pointer to an in array
 **                  parameters.
 *********************************************************************/
 #include "output_letters.hpp"
@@ -50,13 +50,9 @@ void count_letters(ifstream &inFile, int *intArr) {
                     counter++;
                 }
             }
-            intArr[i] = counter;
-            counter = 0;
+            intArr[i] = counter;        // assign counter value in array
+            counter = 0;                // reset counter
         }
-
-        // request output file name for each paragraph
-//        cout << "\nEnter a file name to output results\n";
-//        cin >> outFileName;
 
         // create/overwrite output file object
         ofstream outFile;
