@@ -55,16 +55,16 @@ void count_letters(ifstream &inFile, int *intArr) {
         }
 
         // request output file name for each paragraph
-        cout << "\nEnter a file name to output results\n";
-        cin >> outFileName;
+//        cout << "\nEnter a file name to output results\n";
+//        cin >> outFileName;
 
         // create/overwrite output file object
-        ofstream outFile(outFileName);
+        ofstream outFile;
 
         // call output_letters function to display results
         output_letters(outFile, intArr);
 
         // close output file
-        outFile.close();
+//        outFile.close();
     }
 }
