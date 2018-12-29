@@ -29,7 +29,7 @@ void count_letters(ifstream &inFile, int *intArr) {
     while (inFile >> input) {
         cout << input;
         fileString += input;
-        counter++;
+//        counter++;
     }
     cout << endl;
     cout << "The string created is\n" <<fileString << endl;
@@ -45,6 +45,15 @@ void count_letters(ifstream &inFile, int *intArr) {
 //    cout << fileString[1] << endl;
 //    cout << fileString[2] << endl;
 
+    // make all characters lowercase
+    for (int x = 0; x < stringLength; x++) {
+        fileString[x] = tolower(fileString[x]);
+    }
+
+    cout << endl;
+    cout << "Show lower case letters in string \n" << fileString << endl;
+    cout << endl;
+
     ptr = new int[stringLength];
     for (int x = 0; x < stringLength; x++) {
         ptr[x] = 0;
@@ -59,11 +68,12 @@ void count_letters(ifstream &inFile, int *intArr) {
 //    ptr[0] += 2;
 //    cout << "Value in ptr array " << ptr[0] << endl;
 
-    for (int i = 0; i < fileString.length(); i++) {
-        for (int j = 0; j < abc.length(); j++) {
-            if (fileString[i] == abc[j]) {
-                ptr[i] += 1;
+    for (int i = 0; i < abc.length(); i++) {
+        for (int j = 0; j < stringLength; j++) {
+            if (fileString[j] == abc[i]) {
+                counter++;
             }
+            ptr[i] = counter;
         }
     }
 
