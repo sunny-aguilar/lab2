@@ -21,11 +21,10 @@ void count_letters(ifstream &inFile, int *intArr) {
     int stringLength = 0;
     char charsInfile[27];
     char letter;
-    string input;
-    string fileString;
+    string input = "";
+    string fileString = "";
     int counter = 0;
     int *ptr = nullptr;
-
 
     while (inFile >> input) {
         cout << input;
