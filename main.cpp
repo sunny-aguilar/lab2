@@ -58,8 +58,8 @@ int main() {
     output_letters(outFile, frequencyPtr);              // format and output results to a file
     outFile.close();                                    // close output file
 
-    delete [] frequencyPtr;
-    frequencyPtr = nullptr;
+//    delete [] frequencyPtr;
+//    frequencyPtr = nullptr;
 
     return 0;
 }
