@@ -27,12 +27,14 @@ void count_letters(ifstream &inFile, int *intArr) {
     int *ptr = nullptr;
 
 
-    while (!inFile.fail()) {
+    while (inFile >> input) {
         cout << input;
         inFile >> input;
         fileString += input;
+        counter++;
+        cout << "\nCounter is at " << counter << endl;
     }
-    stringLength = fileString.length();
+//    stringLength = fileString.length();
     cout << "\nString length is " << fileString.length();
     cout << endl;
 
@@ -57,18 +59,21 @@ void count_letters(ifstream &inFile, int *intArr) {
     }
     cout << endl;
 
-    for (int i = 0; i < fileString.length(); i++) {
-//        for (int j = 0; i < abc.length(); j++) {
+    ptr[0] += 2;
+    cout << "Value in ptr array " << ptr[0] << endl;
+
+//    for (int i = 0; i < fileString.length(); i++) {
+//        for (int j = 0; j < abc.length(); j++) {
 //            if (fileString[i] == abc[j]) {
 //                ptr[i] += 1;
 //            }
 //        }
-    }
+//    }
 
     cout << "\nPrint contents of pointer array\n";
-    for (int z = 0; z < stringLength; z++) {
-        cout << ptr[z] << " ";
-    }
+//    for (int z = 0; z < stringLength; z++) {
+//        cout << ptr[z] << " ";
+//    }
     cout << endl;
 
 //    while (inFile >> letter) {
