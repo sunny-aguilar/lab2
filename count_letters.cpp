@@ -50,28 +50,28 @@ void count_letters(ifstream &inFile, int *intArr) {
         ptr[x] = 0;
     }
 //    cout << endl;
-    cout << "Output ptr[x] contents ";
-    for (int x = 0; x < stringLength; x++) {
-        cout << ptr[x] << " ";
-    }
+//    cout << "Output ptr[x] contents ";
+//    for (int x = 0; x < stringLength; x++) {
+//        cout << ptr[x] << " ";
+//    }
     cout << endl;
-//
+
 //    ptr[0] += 2;
 //    cout << "Value in ptr array " << ptr[0] << endl;
 
-//    for (int i = 0; i < fileString.length(); i++) {
-//        for (int j = 0; j < abc.length(); j++) {
-//            if (fileString[i] == abc[j]) {
-//                ptr[i] += 1;
-//            }
-//        }
-//    }
+    for (int i = 0; i < fileString.length(); i++) {
+        for (int j = 0; j < abc.length(); j++) {
+            if (fileString[i] == abc[j]) {
+                ptr[i] += 1;
+            }
+        }
+    }
 
-//    cout << "\nPrint contents of pointer array\n";
-//    for (int z = 0; z < stringLength; z++) {
-//        cout << ptr[z] << " ";
-//    }
-//    cout << endl;
+    cout << "\nPrint contents of pointer array\n";
+    for (int z = 0; z < stringLength; z++) {
+        cout << ptr[z] << " ";
+    }
+    cout << endl;
 
 
 
