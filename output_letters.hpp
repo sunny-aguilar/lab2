@@ -10,6 +10,7 @@
 
 #include <fstream>
 using std::ofstream;
+
 void output_letters(ofstream &, int*);
 
 #endif
