@@ -1,7 +1,7 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Jan 2019
-** Description:     cout_letters function accepts a reference to a file
+** Description:     count_letters function accepts a reference to a file
 **                  object and a pointer to an int array. The function
 **                  reads in a file specified by user. For each
 **                  paragraph, the function counts the frequency of
