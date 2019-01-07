@@ -24,7 +24,7 @@ int main() {
 
     do {                                                // loop - ask user for file name if incorrect
         cin >> fileName;                                // input_fun.txt
-        inFile.open("input_fun.txt");                   // input file data from input_fun.txt
+        inFile.open(fileName);                   // input file data from input_fun.txt
         if (inFile.fail())
             cout << "File not found! "                  // request file name if not found
                  << "Enter a file name:\n";
