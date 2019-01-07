@@ -29,9 +29,9 @@ void output_letters(ofstream &outFile, int *intArr) {
     // create/overwrite output file object
     outFile.open(outFileName);
 
-    // output alphabet with character count
+    // output alphabet with character count and format it
     for (int i = 0; i < 26; i++) {
-        outFile << abc[i] << ": " << intArr[i] << " \n";
+        outFile << abc[i] << ": " << intArr[i] << " \n\n";
     }
 
     // close output file
