@@ -19,11 +19,13 @@ void output_letters(ofstream &outFile, int *intArr) {
     // string holding alphabet
     string abc = "abcdefghijklmnopqrstuvwxyz";
     string outFileName;
+    static int count = 1;
 
     // request output file name for each paragraph
-    cout << "\nEnter a file name to output results\n";
+    cout << "\nEnter a file name to output results for file #"
+         << count << endl;
     cin >> outFileName;
-
+    count++;
     // create/overwrite output file object
     outFile.open(outFileName);
 
