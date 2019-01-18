@@ -10,17 +10,17 @@
 #include "output_letters.hpp"
 
 void output_letters(ofstream &outFile, int *intArr) {
-    // string holding alphabet
+    // create variables
     string abc = "abcdefghijklmnopqrstuvwxyz";
     string outFileName;
-    static int count = 1;
+    static int count = 1;   // remember how many times this function called
 
     // request output file name for each paragraph
     cout << "\nEnter a file name to output results for file #"
          << count << endl;
     cin >> outFileName;
     count++;
-    
+
     // create/overwrite output file object
     outFile.open(outFileName);
 

@@ -10,9 +10,9 @@
 
 int main() {
     // create variables
-    string fileName;                                    // holds input file name
-    string outFileName;                                 // holds output file names
-    int *frequencyPtr = new int[26];                    // allocate int array
+    string fileName;                            // holds input file name
+    string outFileName;                         // holds output file names
+    int *frequencyPtr = new int[26];            // allocate int array
 
     // create input file object
     ifstream inFile;
@@ -20,14 +20,15 @@ int main() {
 
     // loop - ask user for file name if incorrect
     do {
-        cin >> fileName;                                // file_fun.txt
-        inFile.open(fileName);                          // input file data from file_fun.txt
+        cin >> fileName;                        // file_fun.txt
+        inFile.open(fileName);                  // input file data from file_fun.txt
         if (inFile.fail())
-            cout << "File not found! "                  // request file name if not found
+            cout << "File not found! "          // request file name if not found
                  << "Enter a file name:\n";
-    } while (inFile.fail());                            // if file not found, repeat loop
+    } while (inFile.fail());                    // if file not found, repeat loop
 
-    cout << "Input file successfully opened\n";         // confirm input file opened
+    // confirm input file opened
+    cout << "Input file successfully opened\n";
 
     // call functions until end of file is reached
     while (!inFile.eof()) {
