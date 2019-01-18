@@ -20,6 +20,7 @@ void output_letters(ofstream &outFile, int *intArr) {
          << count << endl;
     cin >> outFileName;
     count++;
+    
     // create/overwrite output file object
     outFile.open(outFileName);
 
