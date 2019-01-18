@@ -9,16 +9,19 @@
 #include "output_letters.hpp"
 
 int main() {
+    // create variables
     string fileName;                                    // holds input file name
     string outFileName;                                 // holds output file names
     int *frequencyPtr = new int[26];                    // allocate int array
 
-    ifstream inFile;                                    // create input file object
-    cout << "Enter a file name (i.e. file_fun.txt):\n"; // message prompt for user
+    // create input file object
+    ifstream inFile;
+    cout << "Enter a file name (i.e. file_fun.txt):\n";
 
-    do {                                                // loop - ask user for file name if incorrect
-        cin >> fileName;                                // input_fun.txt
-        inFile.open(fileName);                          // input file data from input_fun.txt
+    // loop - ask user for file name if incorrect
+    do {
+        cin >> fileName;                                // file_fun.txt
+        inFile.open(fileName);                          // input file data from file_fun.txt
         if (inFile.fail())
             cout << "File not found! "                  // request file name if not found
                  << "Enter a file name:\n";
