@@ -26,14 +26,15 @@ int main() {
 
     cout << "Input file successfully opened\n";         // confirm input file opened
 
+    // call functions until end of file is reached
     while (!inFile.eof()) {
-        count_letters(inFile, frequencyPtr);            // call count_Letters function
+        // call count_Letters function
+        count_letters(inFile, frequencyPtr);
 
         // create/overwrite output file object
         ofstream outFile;
         // call output_letters function to display results
         output_letters(outFile, frequencyPtr);
-
     }
 
     // close input file
