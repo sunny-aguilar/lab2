@@ -20,17 +20,22 @@ int main() {
     int *frequencyPtr = new int[26];                    // create a pointer to an int array
 
     ifstream inFile;                                    // create input file object
-    cout << "Enter a file name:\n";                     // message prompt for user
+    cout << "Enter a file name (i.e. file_fun.txt):\n"; // message prompt for user
 
     do {                                                // loop - ask user for file name if incorrect
         cin >> fileName;                                // input_fun.txt
-        inFile.open(fileName);                   // input file data from input_fun.txt
+        inFile.open(fileName);                          // input file data from input_fun.txt
         if (inFile.fail())
             cout << "File not found! "                  // request file name if not found
                  << "Enter a file name:\n";
     } while (inFile.fail());                            // if file not found, repeat loop
 
     cout << "Input file successfully opened\n";         // confirm input file opened
+
+    while (!inFile.eof()) {
+        
+    }
+
     count_letters(inFile, frequencyPtr);                // call count_Letters function
     inFile.close();                                     // close input file
 

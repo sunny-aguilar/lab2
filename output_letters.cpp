@@ -31,7 +31,7 @@ void output_letters(ofstream &outFile, int *intArr) {
 
     // output alphabet with character count and format it
     for (int i = 0; i < 26; i++) {
-        outFile << abc[i] << ": " << intArr[i] << " \n\n";
+        outFile << abc[i] << ": " << intArr[i] << " \r\n";
     }
 
     // close output file
