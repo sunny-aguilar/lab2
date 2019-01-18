@@ -14,7 +14,11 @@
 #define COUNT_LETTERS_HPP
 
 #include <iostream>
+#include <fstream>
+#include <string>
+#include <cctype>
 using std::ifstream;
+using std::string;
 
 // function prototype
 void count_letters(ifstream &, int*);

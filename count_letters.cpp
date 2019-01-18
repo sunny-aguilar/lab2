@@ -10,18 +10,10 @@
 **                  with output file and pointer to an in array
 **                  parameters.
 *********************************************************************/
-#include "output_letters.hpp"
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <cctype>
-using std::cin;
-using std::cout;
-using std::ifstream;
-using std::string;
-using std::endl;
+#include "count_letters.hpp"
 
 void count_letters(ifstream &inFile, int *intArr) {
+    // create variables
     string abc = "abcdefghijklmnopqrstuvwxyz";
     int stringLength = 0;
     string input;
@@ -29,35 +21,26 @@ void count_letters(ifstream &inFile, int *intArr) {
     string outFileName;
     int counter = 0;
 
-    // loop though the input file contents until EOF
-    while (!inFile.eof()) {
-        // get a paragraph
-        getline(inFile, input);
+    // get a paragraph
+    getline(inFile, input);
 
-        // get the sum of total characters in paragraph
-        stringLength = input.size();
+    // get the sum of total characters in paragraph
+    stringLength = input.size();
 
-        // make all characters lowercase
-        for (int i = 0; i < stringLength; i++) {
-            input[i] = tolower(input[i]);
-        }
+    // make all characters in paragraph lowercase
+    for (int i = 0; i < stringLength; i++) {
+        input[i] = tolower(input[i]);
+    }
 
-        // loop through each paragraph, count characters in each, and
-        // save the results in the pointer to the int array
-        for (int i = 0; i < abc.length(); i++) {
-            for (int j = 0; j < stringLength; j++) {
-                if (input[j] == abc[i]) {
-                    counter++;
-                }
+    // loop through each paragraph, count characters in each, and
+    // save the results in the pointer to the int array
+    for (int i = 0; i < abc.length(); i++) {
+        for (int j = 0; j < stringLength; j++) {
+            if (input[j] == abc[i]) {
+                counter++;
             }
-            intArr[i] = counter;        // assign counter value in array
-            counter = 0;                // reset counter
         }
-
-        // create/overwrite output file object
-        ofstream outFile;
-
-        // call output_letters function to display results
-        output_letters(outFile, intArr);
+        intArr[i] = counter;        // assign counter value in array
+        counter = 0;                // reset counter
     }
 }

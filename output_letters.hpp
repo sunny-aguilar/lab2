@@ -9,8 +9,14 @@
 #ifndef OUTPUT_LETTERS_HPP
 #define OUTPUT_LETTERS_HPP
 
+#include <iostream>
 #include <fstream>
+#include <string>
 using std::ofstream;
+using std::string;
+using std::cin;
+using std::cout;
+using std::endl;
 
 // function prototype
 void output_letters(ofstream &, int*);

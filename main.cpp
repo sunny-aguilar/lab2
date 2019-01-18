@@ -6,18 +6,12 @@
 **                  results to a new file.
 *********************************************************************/
 #include "count_letters.hpp"
-#include <iostream>
-#include <fstream>
-#include <string>
-using std::cin;
-using std::cout;
-using std::ifstream;
-using std::endl;
-using std::string;
+#include "output_letters.hpp"
 
 int main() {
-    string fileName;                                    // variable to save input file name
-    int *frequencyPtr = new int[26];                    // create a pointer to an int array
+    string fileName;                                    // holds input file name
+    string outFileName;                                 // holds output file names
+    int *frequencyPtr = new int[26];                    // allocate int array
 
     ifstream inFile;                                    // create input file object
     cout << "Enter a file name (i.e. file_fun.txt):\n"; // message prompt for user
@@ -33,14 +27,23 @@ int main() {
     cout << "Input file successfully opened\n";         // confirm input file opened
 
     while (!inFile.eof()) {
-        
+        count_letters(inFile, frequencyPtr);            // call count_Letters function
+
+        // create/overwrite output file object
+        ofstream outFile;
+        // call output_letters function to display results
+        output_letters(outFile, frequencyPtr);
+
     }
 
-    count_letters(inFile, frequencyPtr);                // call count_Letters function
-    inFile.close();                                     // close input file
+    // close input file
+    inFile.close();
 
-    delete [] frequencyPtr;                             // delete memory
-    frequencyPtr = nullptr;                             // remove dangling pointer
+    // deallocate heap memory
+    delete [] frequencyPtr;
+
+    // remove dangling pointer
+    frequencyPtr = nullptr;
 
     return 0;
 }

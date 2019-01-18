@@ -6,14 +6,7 @@
 **                  The frequencies contained in the pointer to the
 **                  array are saved alphabetically.
 *********************************************************************/
-#include <fstream>
-#include <iostream>
-#include <string>
-using std::ofstream;
-using std::string;
-using std::cin;
-using std::cout;
-using std::endl;
+#include "output_letters.hpp"
 
 void output_letters(ofstream &outFile, int *intArr) {
     // string holding alphabet
