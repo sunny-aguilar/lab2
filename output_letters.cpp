@@ -2,9 +2,10 @@
 ** Author:          Sandro Aguilar
 ** Date:            Jan 2019
 ** Description:     This function receives two parameters which are an
- *                  ofstream object and and a pointer to an int array.
-**                  The frequencies contained in the pointer to the
-**                  array are saved alphabetically.
+**                  ofstream object and and a pointer to an int array.
+**                  The frequencies contained from the pointer to the
+**                  array are saved alphabetically and saved to a file
+**                  for each paragraph.
 *********************************************************************/
 #include "output_letters.hpp"
 

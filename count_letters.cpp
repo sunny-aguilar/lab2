@@ -5,10 +5,7 @@
 **                  object and a pointer to an int array. The function
 **                  reads in a file specified by user. For each
 **                  paragraph, the function counts the frequency of
-**                  each letter and ask the user what filename to
-**                  output to. Function output_letters is then called
-**                  with output file and pointer to an in array
-**                  parameters.
+**                  each letter.
 *********************************************************************/
 #include "count_letters.hpp"
 
